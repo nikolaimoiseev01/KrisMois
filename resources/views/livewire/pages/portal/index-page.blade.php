@@ -1,17 +1,748 @@
-<main class="flex-1">
-   <section class="w-full h-screen relative flex items-center justify-center mb-20">
-       <img src="/fixed/welcome-bg.png" class="absolute w-full h-full object-cover" alt="">
-       <div class="flex flex-col items-center relative gap-2">
-           <x-logo class="w-40 md:w-32"/>
-           <svg width="234" height="53" viewBox="0 0 234 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M190.635 49.2963V38.3626L190.487 36.8851L190.561 30.9011L190.709 29.4975L190.561 28.0938V26.6163L190.487 24.991L190.709 22.036L190.561 20.5584L190.487 3.64079L191.373 1.57225L192.703 0.83349L197.062 0.464111L198.687 0.537987L200.165 0.83349H201.642L202.972 0.464111H204.449L205.927 0.759615H210.36L212.502 0.611862L214.866 0.685737L219.077 1.64613L221.884 2.60652L224.47 4.01017L228.681 8.44274L229.494 9.62477L230.085 10.8807L231.414 15.0916L231.636 16.5691L231.784 21.2233L230.823 25.5082L227.942 30.6795L226.908 31.566L225.874 32.6741L225.209 34.2994L225.283 36.0725L226.169 37.1806L228.533 41.0222L229.198 42.3519L231.71 46.1196L232.301 47.5233L233.187 48.5575L234 50.1828L233.557 51.8081L232.153 52.473L229.715 52.5469L228.312 52.3991L222.475 52.473L219.964 51.8081L218.338 50.4783L217.526 49.2224L216.935 47.7449L216.122 46.6368L214.718 43.9772L213.167 41.7609L212.576 40.4312L211.689 38.9536L210.212 37.6977L205.927 37.1067L204.523 37.9194L203.858 39.3969L203.711 44.125L203.932 45.6764L203.785 47.0061V49.5179L203.12 51.6603L200.756 52.3991H198.539L197.357 52.5469L194.993 52.3252L193.516 52.5469L191.373 51.5865L190.635 49.2963ZM205.927 25.2865L207.552 25.1388L211.098 25.2865L212.502 25.2127L214.644 24.6955L215.974 24.1045L216.787 23.4396L217.599 22.3315L218.264 20.854L218.486 18.6377L218.19 16.7169L217.747 15.5349L215.9 13.2447L214.497 12.8753L212.576 12.7276L210.507 12.2843L207.552 12.5798L206.075 12.5059L204.523 13.0969L203.858 14.5006L203.711 17.6034L203.858 18.8593V23.2919L204.449 24.4739L205.927 25.2865Z" fill="#ECEBF3"/>
-               <path d="M170.645 52.473L169.094 52.3253L167.394 51.5865L165.917 50.4783L165.474 49.1486L164.809 47.7449L163.405 46.5629L161.78 45.7503L160.154 45.9719L158.825 45.8241L151.585 45.898L150.255 45.6764L147.152 45.9719L145.749 45.7503L144.197 46.5629L142.794 47.9666L141.464 50.4045L140.06 51.7342L138.361 52.2514L134.224 52.3991L132.746 52.2514L129.865 52.3991L128.388 51.9559L128.018 50.109L128.462 48.6314L129.939 45.6764L130.308 44.3466L131.121 43.3123L132.229 40.3573L133.559 37.9933L134.076 36.5157L134.815 35.4076L135.258 33.7823L142.794 17.9728L143.237 16.643L144.049 15.2394L144.419 13.7619L145.231 12.6537L148.187 5.8571L148.851 4.82283L149.369 3.3453L150.033 2.08941L151.363 0.833511L153.727 0.020874L156.165 0.759635L157.421 2.08941L158.825 4.67507L159.268 6.00485L160.081 7.33462L160.524 8.81214L165.4 19.0809L165.917 20.6323L167.468 23.3658L167.911 24.5478L168.576 25.6559L169.02 27.2812L169.758 28.6849L170.497 29.793L173.304 36.5157L174.782 39.1753L175.816 41.9087L177.811 45.7503L178.919 48.4837L179.436 50.1828L179.215 51.9559L177.146 52.3253L174.856 52.3991L173.452 52.2514L170.645 52.473ZM153.875 34.0778L156.83 34.0039L157.938 33.4129L158.234 32.0832L154.762 23.9568L153.727 23.3658L152.915 24.0307L149.442 32.0093L149.516 33.4129L150.698 33.9301L152.397 33.7823L153.875 34.0778Z" fill="#ECEBF3"/>
-               <path d="M68.5525 52.547L67.075 51.5866L66.2624 50.0352L66.3362 33.7085L66.1885 32.3049L66.4101 24.8434L66.2624 23.3658L66.3362 11.5456L66.1885 10.2159L66.4101 7.3347L66.1885 2.82825L67.0011 1.27685L68.6264 0.538086L70.6949 1.1291L72.3941 2.38499L74.3149 4.37965L75.4969 5.41391L77.4177 7.70408L78.4519 8.5906L85.1747 16.0521L86.8 17.5296L88.1297 19.2288L89.164 20.263L90.0505 21.5189L91.6019 22.1099L92.9317 21.2234L97.4381 16.6431L98.3985 15.3872L104.9 8.73835L105.934 7.40858L106.82 6.59594L107.781 5.41391L110.884 2.16336L112.435 1.20297L114.577 0.538086L116.129 1.35072L117.015 2.90213L116.868 4.30577L116.941 7.3347L116.868 8.5906L117.015 11.7673L116.941 13.1709L117.015 20.4847L116.868 22.1099L117.015 44.2728L116.868 45.7504L117.089 49.5919L116.203 51.7343L114.651 52.547L105.712 52.2515L104.161 51.8082L103.57 50.109V49.0009L103.422 45.6765L103.57 44.3467L103.422 41.6133L103.57 38.7321L103.348 35.7771L103.496 31.7139L102.905 30.6057L101.945 31.049L98.9157 34.1518L97.8814 34.8905L95.8129 37.3285L94.9263 38.215L93.8921 39.3231L92.4145 40.4313L90.7893 40.3574L89.2379 39.2492L87.2432 37.3285L86.2828 36.1464L83.2539 33.1175L82.3674 32.0094L81.1854 31.049L80.4466 30.7535L79.7817 31.4184V34.2995L79.9295 35.9248L79.7817 38.5844L79.8556 40.1358L79.634 42.4259L79.8556 50.1829L78.9691 51.5127L76.9005 52.3992L74.5365 52.2515L72.9112 52.4731L70.03 52.3253L68.5525 52.547Z" fill="#ECEBF3"/>
-               <path d="M2.36404 52.547L0.886515 51.5866L0.0738764 50.0352L0.147752 33.7085L0 32.3049L0.221629 24.8434L0.0738764 23.3658L0.147752 11.5456L0 10.2159L0.221629 7.3347L0 2.82825L0.812639 1.27685L2.43792 0.538086L4.50645 1.1291L6.20561 2.38499L8.12639 4.37965L9.30841 5.41391L11.2292 7.70408L12.2635 8.5906L18.9862 16.0521L20.6115 17.5296L21.9412 19.2288L22.9755 20.263L23.862 21.5189L25.4134 22.1099L26.7432 21.2234L31.2497 16.6431L32.21 15.3872L38.7112 8.73835L39.7454 7.40858L40.6319 6.59594L41.5923 5.41391L44.6951 2.16336L46.2465 1.20297L48.3889 0.538086L49.9403 1.35072L50.8269 2.90213L50.6791 4.30577L50.753 7.3347L50.6791 8.5906L50.8269 11.7673L50.753 13.1709L50.8269 20.4847L50.6791 22.1099L50.8269 44.2728L50.6791 45.7504L50.9007 49.5919L50.0142 51.7343L48.4628 52.547L39.5238 52.2515L37.9724 51.8082L37.3814 50.109V49.0009L37.2336 45.6765L37.3814 44.3467L37.2336 41.6133L37.3814 38.7321L37.1598 35.7771L37.3075 31.7139L36.7165 30.6057L35.7561 31.049L32.7272 34.1518L31.6929 34.8905L29.6244 37.3285L28.7379 38.215L27.7036 39.3231L26.2261 40.4313L24.6008 40.3574L23.0494 39.2492L21.0547 37.3285L20.0943 36.1464L17.0654 33.1175L16.1789 32.0094L14.9969 31.049L14.2581 30.7535L13.5932 31.4184V34.2995L13.741 35.9248L13.5932 38.5844L13.6671 40.1358L13.4455 42.4259L13.6671 50.1829L12.7806 51.5127L10.7121 52.3992L8.34802 52.2515L6.72274 52.4731L3.84157 52.3253L2.36404 52.547Z" fill="#ECEBF3"/>
-           </svg>
-       </div>
-   </section>
-    <section>
-        <h2>Just In</h2>
+<div className="min-h-screen bg-white overflow-x-hidden">
+
+    <section
+        x-data
+        class="flex min-h-screen items-center bg-white px-6 py-16 md:min-h-0 md:py-10 sm:px-4"
+    >
+        <div class="mx-auto w-full max-w-7xl">
+            <div class="grid grid-cols-2 items-center gap-16 lg:grid-cols-1 lg:gap-12">
+                <!-- Left - Portrait -->
+                <div
+                    x-data="{ show: false }"
+                    x-init="setTimeout(() => show = true, 200)"
+                    x-bind:class="show ? 'opacity-100 scale-100' : 'opacity-0 scale-95'"
+                    class="transition-all duration-1000 ease-out"
+                >
+                    <div class="aspect-[3/4] overflow-hidden">
+                        <img
+                            src="/fixed/welcome-photo.png"
+                            alt="Кристина Моисеева"
+                            class="h-full w-full object-cover grayscale"
+                        >
+                    </div>
+                </div>
+
+                <!-- Right - Text -->
+                <div
+                    x-data="{ show: false }"
+                    x-init="setTimeout(() => show = true, 500)"
+                    x-bind:class="show ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
+                    class="space-y-8 transition-all duration-1000 ease-out"
+                >
+                    <div class="space-y-4">
+                        <h1 class="text-7xl leading-[1.05] tracking-tight text-black lg:text-6xl md:text-5xl sm:text-4xl">
+                            Кристина
+                            <br>
+                            Моисеева
+                        </h1>
+
+                        <p class="text-2xl text-black/50 md:text-xl">
+                            Бренд-менеджер
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h2 class="text-3xl tracking-tight text-black md:text-2xl sm:text-xl">
+                            Стратегия. Смыслы. Бренды.
+                        </h2>
+
+                        <p class="text-xl leading-relaxed text-black/70 md:text-lg sm:text-base">
+                            Я верю, что сильный бренд начинается не с логотипа, а с понимания людей,
+                            для которых он создаётся.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-</main>
+
+    <section class="bg-neutral-50 px-6 py-12 md:py-12 sm:px-4">
+        <div
+            x-data="{ inView: false }"
+            x-intersect.threshold.30="inView = true"
+            x-bind:class="inView ? 'opacity-100' : 'opacity-0'"
+            class="mx-auto max-w-5xl space-y-10 transition-opacity duration-700 ease-out"
+        >
+            <h2 class="text-5xl leading-[1.1] tracking-tight text-black md:text-4xl sm:text-3xl">
+                Почему именно я?
+            </h2>
+
+            <div class="space-y-6 text-xl leading-relaxed text-black/70 md:text-lg sm:text-base">
+                <p>
+                    Я не верю в брендинг ради брендинга.
+                </p>
+
+                <p>
+                    За красивой айдентикой всегда должен стоять смысл.
+                </p>
+
+                <p>
+                    В своей работе я привыкла опираться на исследования, аналитику и реальные данные,
+                    потому что именно они позволяют принимать решения, которые работают не только
+                    в презентации, но и в бизнесе.
+                </p>
+
+                <p>
+                    Мне интересно находить инсайты, изучать поведение аудитории, формулировать
+                    позиционирование и превращать сложные идеи в понятные и востребованные бренды.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section
+        x-data="{ openIndex: null, inView: false }"
+        x-intersect.threshold.05="inView = true"
+        class="bg-[#0a0a0a] px-6 py-16 md:py-16 sm:px-4"
+    >
+        <div class="mx-auto max-w-5xl">
+            <div
+                x-bind:class="inView ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'"
+                class="mb-14 flex flex-col gap-4 transition-all duration-700 ease-out md:mb-10"
+            >
+                <h2 class="text-[clamp(2.8rem,7vw,5.5rem)] leading-none tracking-tight text-white">
+                    Проекты,<br>которыми горжусь
+                </h2>
+            </div>
+
+            <div
+                x-bind:class="inView ? 'opacity-100' : 'opacity-0'"
+                class="transition-opacity delay-200 duration-700"
+            >
+                <!-- Project item -->
+                <div class="group border-t border-white/10">
+                    <button
+                        type="button"
+                        @click="openIndex = openIndex === 0 ? null : 0"
+                        class="flex w-full items-center gap-5 py-6 text-left md:gap-4"
+                    >
+                    <span
+                        class="shrink-0 text-xs tracking-[0.2em] tabular-nums transition-colors duration-300"
+                        :class="openIndex === 0 ? 'text-white/60' : 'text-white/20'"
+                    >
+                        01
+                    </span>
+
+                        <span
+                            class="flex-1 text-[clamp(1.6rem,4vw,3.2rem)] leading-[1.05] tracking-[-0.02em] transition-all duration-500"
+                            :class="openIndex === 0 ? 'text-white' : 'text-white/50 group-hover:text-white/85'"
+                        >
+                        Ямал Гурмэ
+                    </span>
+
+                        <div class="flex items-center gap-6 lg:hidden">
+                        <span class="text-xs uppercase tracking-[0.15em] text-white/25">
+                            Региональный бренд
+                        </span>
+                        </div>
+
+                        <div
+                            class="flex h-8 w-8 shrink-0 items-center justify-center border transition-all duration-300"
+                            :class="openIndex === 0 ? 'border-white/40' : 'border-white/15'"
+                        >
+                        <span
+                            class="block select-none text-lg leading-none text-white/60 transition-transform duration-300"
+                            :class="openIndex === 0 ? 'rotate-45' : 'rotate-0'"
+                        >
+                            +
+                        </span>
+                        </div>
+                    </button>
+
+                    <div
+                        x-show="openIndex === 0"
+                        x-collapse
+                        x-cloak
+                        class="overflow-hidden"
+                    >
+                        <div class="pb-10 md:pb-8">
+                            <div class="grid grid-cols-[3fr_2fr] gap-12 lg:grid-cols-1 lg:gap-8">
+                                <!-- Carousel -->
+                                <div
+                                    x-data="{
+                                    active: 0,
+                                    images: [
+                                        {
+                                            src: '{{ asset('images/yamal-1.png') }}',
+                                            contain: false,
+                                            bg: '#111'
+                                        },
+                                        {
+                                            src: '{{ asset('images/yamal-2.jpg') }}',
+                                            contain: false,
+                                            bg: '#111'
+                                        },
+                                        {
+                                            src: '{{ asset('images/yamal-3.jpg') }}',
+                                            contain: false,
+                                            bg: '#111'
+                                        },
+                                        {
+                                            src: '{{ asset('images/yamal-4.jpg') }}',
+                                            contain: false,
+                                            bg: '#111'
+                                        }
+                                    ]
+                                }"
+                                    class="flex flex-col gap-2.5"
+                                >
+                                    <div class="relative aspect-[16/10] overflow-hidden">
+                                        <template x-for="(image, index) in images" :key="index">
+                                            <div
+                                                x-show="active === index"
+                                                x-transition.opacity.duration.300ms
+                                                class="h-full w-full"
+                                                :style="`background: ${image.bg}`"
+                                            >
+                                                <img
+                                                    :src="image.src"
+                                                    :alt="`Фото ${index + 1}`"
+                                                    class="h-full w-full"
+                                                    :class="image.contain ? 'object-contain p-8' : 'object-cover'"
+                                                >
+                                            </div>
+                                        </template>
+
+                                        <div class="absolute bottom-3 right-3 bg-black/50 px-2.5 py-1 text-xs tracking-widest text-white/90 backdrop-blur-sm">
+                                            <span x-text="active + 1"></span> /
+                                            <span x-text="images.length"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex gap-1.5" x-show="images.length > 1">
+                                        <template x-for="(image, index) in images" :key="index">
+                                            <button
+                                                type="button"
+                                                @click="active = index"
+                                                class="relative shrink-0 overflow-hidden transition-all duration-300"
+                                                :style="`width: ${100 / images.length}%; aspect-ratio: 16 / 10; opacity: ${active === index ? 1 : 0.35}; outline: ${active === index ? '2px solid #fff' : 'none'}; background: ${image.bg}`"
+                                            >
+                                                <img
+                                                    :src="image.src"
+                                                    alt=""
+                                                    class="h-full w-full"
+                                                    :class="image.contain ? 'object-contain' : 'object-cover'"
+                                                >
+                                            </button>
+                                        </template>
+                                    </div>
+                                </div>
+
+                                <!-- Text -->
+                                <div class="flex flex-col justify-start gap-5">
+                                    <div class="hidden text-xs uppercase tracking-[0.15em] text-white/30 lg:block">
+                                        Региональный бренд
+                                    </div>
+
+                                    <p class="text-base leading-relaxed text-white/50">
+                                        Разработка и запуск регионального бренда локальной продукции Ямала.
+                                        От исследования и разработки концепции до вывода бренда на рынок
+                                        и реализации стратегии продвижения.
+                                    </p>
+
+                                    <div class="space-y-2.5 pt-1">
+                                        <div class="flex items-start gap-3">
+                                            <span class="mt-[5px] shrink-0 text-[9px] text-white/20">✦</span>
+                                            <p class="text-sm leading-relaxed text-white/40">
+                                                Разработка регионального бренда с нуля
+                                            </p>
+                                        </div>
+
+                                        <div class="flex items-start gap-3">
+                                            <span class="mt-[5px] shrink-0 text-[9px] text-white/20">✦</span>
+                                            <p class="text-sm leading-relaxed text-white/40">
+                                                Проведение аналитики, количественного и качественного исследования
+                                            </p>
+                                        </div>
+
+                                        <div class="flex items-start gap-3">
+                                            <span class="mt-[5px] shrink-0 text-[9px] text-white/20">✦</span>
+                                            <p class="text-sm leading-relaxed text-white/40">
+                                                Разработка бренд-платформы
+                                            </p>
+                                        </div>
+
+                                        <div class="flex items-start gap-3">
+                                            <span class="mt-[5px] shrink-0 text-[9px] text-white/20">✦</span>
+                                            <p class="text-sm leading-relaxed text-white/40">
+                                                Создание дизайн-системы бренда
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/10"></div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        x-data="{ inView: false }"
+        x-intersect.threshold.10="inView = true"
+        class="bg-neutral-50 px-6 py-14 md:py-14 sm:px-4"
+    >
+        <div class="mx-auto max-w-6xl">
+            <div
+                x-bind:class="inView ? 'opacity-100' : 'opacity-0'"
+                class="space-y-14 transition-opacity duration-700 ease-out md:space-y-10"
+            >
+                <h2 class="text-5xl leading-[1.1] tracking-tight text-black md:text-4xl sm:text-3xl">
+                    Последние 10 лет
+                </h2>
+
+                <div class="space-y-0">
+                    <!-- 1 -->
+                    <div
+                        x-bind:class="inView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
+                        class="group border-t border-black/10 py-10 transition-all duration-700 ease-out md:py-8"
+                    >
+                        <div class="grid grid-cols-[1fr_2fr] gap-16 lg:grid-cols-1 lg:gap-6">
+                            <div class="space-y-2">
+                                <h3 class="text-xl leading-snug tracking-tight text-black md:text-lg">
+                                    Брендинговое агентство «Дюшес»
+                                </h3>
+                                <p class="text-base uppercase tracking-widest text-black/40 sm:text-sm">
+                                    Бренд-менеджер
+                                </p>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65 md:text-base">
+                                        Разработка бренд-платформ, позиционирования и коммуникационных стратегий для компаний из различных отраслей
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65 md:text-base">
+                                        Проведение качественных и количественных исследований рынка, аудитории и конкурентной среды
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65 md:text-base">
+                                        Поиск потребительских инсайтов и определение точек роста брендов
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65 md:text-base">
+                                        Создание концепций брендов, разработка нейминга и архитектуры продуктовых линеек
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65 md:text-base">
+                                        Управление проектами на всех этапах: от исследования и стратегии до внедрения решений
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65 md:text-base">
+                                        Постановка задач дизайнерам и подрядчикам, контроль качества реализации концепций
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65 md:text-base">
+                                        Подготовка и защита стратегических решений перед клиентами
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65 md:text-base">
+                                        Координация работы проектных команд, объединяющих стратегию, креатив и дизайн
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div
+                        x-bind:class="inView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
+                        class="group border-t border-black/10 py-10 transition-all delay-150 duration-700 ease-out md:py-8"
+                    >
+                        <div class="grid grid-cols-[1fr_2fr] gap-16 lg:grid-cols-1 lg:gap-6">
+                            <div class="space-y-2">
+                                <h3 class="text-xl leading-snug tracking-tight text-black md:text-lg">
+                                    Издательство «Первая книга»
+                                </h3>
+                                <p class="text-base uppercase tracking-widest text-black/40 sm:text-sm">
+                                    Основатель
+                                </p>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65">
+                                        Создание и развитие собственного издательского проекта
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65">
+                                        Формирование маркетинговой стратегии и продвижение бренда
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65">
+                                        Управление операционной и финансовой деятельностью компании
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65">
+                                        Организация работы команды и выстраивание бизнес-процессов
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3 -->
+                    <div
+                        x-bind:class="inView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'"
+                        class="group border-t border-black/10 py-10 transition-all delay-300 duration-700 ease-out md:py-8"
+                    >
+                        <div class="grid grid-cols-[1fr_2fr] gap-16 lg:grid-cols-1 lg:gap-6">
+                            <div class="space-y-2">
+                                <h3 class="text-xl leading-snug tracking-tight text-black md:text-lg">
+                                    ООО «Мастер Франшизы» <br class="sm:hidden">
+                                    ТМ «Добрынинский»
+                                </h3>
+                                <p class="text-base uppercase tracking-widest text-black/40 sm:text-sm">
+                                    Бренд-менеджер
+                                </p>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65">
+                                        Создание и запуск новых брендов компании с нуля
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65">
+                                        Доработка бренд-платформы, выстраивание позиционирования и стратегии развития
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65">
+                                        Анализ рынка, конкурентной среды и потребительского поведения
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65">
+                                        Формирование маркетинговых материалов и коммуникационных решений
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65">
+                                        Управление работой дизайнеров, подрядчиков и рекламных агентств
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65">
+                                        Реализация специальных маркетинговых проектов и партнерских коллабораций
+                                    </p>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <span class="mt-1.5 shrink-0 text-xs text-black/25">✦</span>
+                                    <p class="flex-1 text-base leading-relaxed text-black/65">
+                                        Участие в стратегическом развитии брендов компании
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-black/10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        x-data="{ inView: false }"
+        x-intersect.threshold.20="inView = true"
+        class="bg-white px-6 py-20 md:py-16 sm:px-4"
+    >
+        <div class="mx-auto max-w-6xl">
+            <div
+                x-bind:class="inView ? 'opacity-100' : 'opacity-0'"
+                class="space-y-14 transition-opacity duration-700 ease-out md:space-y-10"
+            >
+                <h2 class="text-5xl leading-[1.1] tracking-tight text-black md:text-4xl sm:text-3xl">
+                    Образование
+                </h2>
+
+                <div class="grid grid-cols-2 gap-6 md:grid-cols-1">
+                    <!-- 1 -->
+                    <div
+                        x-bind:class="inView ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
+                        class="relative overflow-hidden bg-neutral-50 p-8 transition-all duration-700 ease-out md:p-6"
+                    >
+                        <div class="pointer-events-none absolute right-6 top-4 select-none text-[80px] leading-none tracking-tight text-black/5 md:text-[64px]">
+                            2014
+                        </div>
+
+                        <div class="relative space-y-5">
+                            <div class="flex items-start justify-between gap-4">
+                            <span class="border border-black/15 px-3 py-1 text-xs uppercase tracking-widest text-black/40">
+                                Россия
+                            </span>
+
+                                <span class="text-sm tracking-wide text-black/40">
+                                2014–2018
+                            </span>
+                            </div>
+
+                            <div class="space-y-2 pt-2">
+                                <h3 class="text-xl leading-snug tracking-tight text-black md:text-lg">
+                                    Петрозаводский государственный университет
+                                </h3>
+
+                                <p class="text-base uppercase tracking-widest text-black/40 sm:text-sm">
+                                    Социология
+                                </p>
+                            </div>
+
+                            <p class="text-base leading-relaxed text-black/55">
+                                Изучение методов исследования потребительского поведения,
+                                анализа данных и социальных процессов.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div
+                        x-bind:class="inView ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
+                        class="relative overflow-hidden bg-neutral-50 p-8 transition-all delay-200 duration-700 ease-out md:p-6"
+                    >
+                        <div class="pointer-events-none absolute right-6 top-4 select-none text-[80px] leading-none tracking-tight text-black/5 md:text-[64px]">
+                            2017
+                        </div>
+
+                        <div class="relative space-y-5">
+                            <div class="flex items-start justify-between gap-4">
+                            <span class="border border-black/15 px-3 py-1 text-xs uppercase tracking-widest text-black/40">
+                                Венгрия
+                            </span>
+
+                                <span class="text-sm tracking-wide text-black/40">
+                                2017–2018
+                            </span>
+                            </div>
+
+                            <div class="space-y-2 pt-2">
+                                <h3 class="text-xl leading-snug tracking-tight text-black md:text-lg">
+                                    University of Pécs
+                                </h3>
+
+                                <p class="text-base uppercase tracking-widest text-black/40 sm:text-sm">
+                                    Бизнес-администрирование и управление
+                                </p>
+                            </div>
+
+                            <p class="text-base leading-relaxed text-black/55">
+                                Подготовка в области управления, экономики и стратегического
+                                развития бизнеса в международной среде.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        x-data="{ inView: false }"
+        x-intersect.threshold.15="inView = true"
+        class="bg-neutral-50 px-6 py-20 md:py-16 sm:px-4"
+    >
+        <div class="mx-auto max-w-6xl">
+            <div
+                x-bind:class="inView ? 'opacity-100' : 'opacity-0'"
+                class="space-y-14 transition-opacity duration-700 ease-out md:space-y-10"
+            >
+                <!-- Photos grid -->
+                <div class="grid grid-cols-3 gap-3 md:grid-cols-1">
+                    <div
+                        x-bind:class="inView ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
+                        class="aspect-[3/4] overflow-hidden bg-neutral-200 transition-all duration-700 ease-out"
+                    >
+                        <img
+                            src="{{ asset('images/photo_2026-06-10_12-36-01__2_.jpg') }}"
+                            alt="Рабочий момент 1"
+                            class="h-full w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
+                        >
+                    </div>
+
+                    <div
+                        x-bind:class="inView ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
+                        class="aspect-[3/4] overflow-hidden bg-neutral-200 transition-all delay-150 duration-700 ease-out"
+                    >
+                        <img
+                            src="{{ asset('images/photo_2026-06-10_12-36-01.jpg') }}"
+                            alt="Рабочий момент 2"
+                            class="h-full w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
+                        >
+                    </div>
+
+                    <div
+                        x-bind:class="inView ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
+                        class="aspect-[3/4] overflow-hidden bg-neutral-200 transition-all delay-300 duration-700 ease-out"
+                    >
+                        <img
+                            src="{{ asset('images/photo_2026-06-10_12-37-23.jpg') }}"
+                            alt="Рабочий момент 3"
+                            class="h-full w-full object-cover grayscale transition-all duration-700 hover:grayscale-0"
+                        >
+                    </div>
+                </div>
+
+                <!-- Statement -->
+                <div
+                    x-bind:class="inView ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'"
+                    class="max-w-4xl border-l-2 border-black pl-8 transition-all delay-500 duration-700 ease-out md:pl-5"
+                >
+                    <p class="text-xl leading-relaxed text-black/70 md:text-lg sm:text-base">
+                        За последние годы я работала с федеральными брендами, образовательными проектами,
+                        FMCG, государственными инициативами и стартапами. От исследований и стратегии
+                        до упаковки, запуска и внедрения. Для меня бренд — это не набор красивых элементов,
+                        а инструмент, который помогает бизнесу находить своих людей и расти.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        x-data="{ inView: false }"
+        x-intersect.threshold.30="inView = true"
+        class="bg-black px-6 py-20 md:py-16 sm:px-4"
+    >
+        <div class="mx-auto max-w-2xl">
+            <div
+                x-bind:class="inView ? 'opacity-100' : 'opacity-0'"
+                class="space-y-16 transition-opacity duration-700 ease-out md:space-y-12"
+            >
+                <!-- Heading -->
+                <h2
+                    x-bind:class="inView ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'"
+                    class="text-7xl leading-[1.05] tracking-tight text-white transition-all duration-700 ease-out md:text-4xl sm:text-3xl"
+                >
+                    Давайте
+                    <br>
+                    <span class="text-white/40">поговорим</span>
+                </h2>
+
+                <!-- Contacts -->
+                <div class="space-y-0">
+                    <!-- Phone -->
+                    <div
+                        x-bind:class="inView ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'"
+                        class="group flex items-center justify-between border-t border-white/10 py-7 transition-all delay-200 duration-700 ease-out md:flex-col md:items-start md:gap-3"
+                    >
+                    <span class="text-sm uppercase tracking-widest text-white/30">
+                        Телефон
+                    </span>
+
+                        <a
+                            href="tel:+79116683719"
+                            class="flex items-center gap-3 text-2xl text-white transition-colors duration-300 hover:text-white/60 md:text-lg"
+                        >
+                            +7 911 668 37 19
+                            <span class="text-lg opacity-0 transition-opacity group-hover:opacity-100">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Telegram -->
+                    <div
+                        x-bind:class="inView ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'"
+                        class="group flex items-center justify-between border-t border-white/10 py-7 transition-all delay-300 duration-700 ease-out md:flex-col md:items-start md:gap-3"
+                    >
+                    <span class="text-sm uppercase tracking-widest text-white/30">
+                        Телеграм
+                    </span>
+
+                        <a
+                            href="https://t.me/Kris_Moi"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="flex items-center gap-3 text-2xl text-white transition-colors duration-300 hover:text-white/60 md:text-lg"
+                        >
+                            @Kris_Moi
+                            <span class="text-lg opacity-0 transition-opacity group-hover:opacity-100">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Email -->
+                    <div
+                        x-bind:class="inView ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'"
+                        class="group flex items-center justify-between border-t border-white/10 py-7 transition-all delay-[420ms] duration-700 ease-out md:flex-col md:items-start md:gap-3"
+                    >
+                    <span class="text-sm uppercase tracking-widest text-white/30">
+                        Почта
+                    </span>
+
+                        <a
+                            href="mailto:sobakina.kris7@gmail.com"
+                            class="flex items-center gap-3 text-2xl text-white transition-colors duration-300 hover:text-white/60 md:text-lg sm:text-base"
+                        >
+                            sobakina.kris7@gmail.com
+                            <span class="text-lg opacity-0 transition-opacity group-hover:opacity-100">→</span>
+                        </a>
+                    </div>
+
+                    <div class="border-t border-white/10"></div>
+                </div>
+
+                <!-- Footer -->
+                <div
+                    x-bind:class="inView ? 'opacity-100' : 'opacity-0'"
+                    class="flex items-center justify-between transition-opacity delay-700 duration-700 ease-out md:flex-col md:items-start md:gap-3"
+                >
+                    <p class="text-sm text-white/20">
+                        © 2026 Кристина Моисеева
+                    </p>
+
+                    <p class="text-sm uppercase tracking-widest text-white/20">
+                        Бренд-менеджер
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

@@ -11,6 +11,6 @@ body {
     @apply bg-main_bg;
 }
 
-h2 {
-    @apply font-[Forum] font-normal text-5xl;
+button, h1, h2, h3 {
+    @apply font-medium;
 }
