@@ -24,7 +24,7 @@
                 </div>
 
                 <p class="text-xs uppercase tracking-[0.35em] text-black/40">
-                    Создаем бренд
+                    Загружаю
                 </p>
             </div>
         </div>
@@ -163,7 +163,7 @@
                             </span>
 
                             <span
-                                class="flex-1 text-[clamp(1.6rem,4vw,3.2rem)] leading-[1.05] tracking-[-0.02em] transition-colors duration-300"
+                                class="flex-1 text-[clamp(1.6rem,4vw,3.2rem)] leading-[1.05] tracking-[-0.02em] font-semibold transition-colors duration-300"
                                 :class="openIndex === {{ $i }}
                                     ? 'text-white'
                                     : 'text-white/50 group-hover:text-white/85'"
@@ -258,7 +258,7 @@
                                                 <img
                                                     :src="image.src"
                                                     alt=""
-                                                    class="h-full w-full"
+                                                    class="h-full w-full ima"
                                                     :class="image.contain ? 'object-contain' : 'object-cover'"
                                                 >
                                             </button>
@@ -354,7 +354,7 @@
                                     Издательство «Первая книга»
                                 </h3>
                                 <p class="text-base uppercase tracking-widest text-black/40 sm:text-sm">
-                                    Основатель
+                                    Основатель: <a href="https://pervajakniga.ru/" target="_blank">перваякнига.рф</a>
                                 </p>
                             </div>
 
