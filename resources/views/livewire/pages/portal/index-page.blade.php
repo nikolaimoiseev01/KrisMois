@@ -1,4 +1,34 @@
-<div class="min-h-screen overflow-x-hidden bg-white">
+<div
+    x-data="pagePreloader()"
+    x-init="init()"
+    class="min-h-screen overflow-x-hidden bg-white"
+>
+    <div
+        x-data="pagePreloader()"
+        x-init="init()"
+        class="min-h-screen overflow-x-hidden bg-white"
+    >
+        <div
+            x-show="visible"
+            x-transition:leave="transition-all duration-700 ease-in-out"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+            class="fixed inset-0 z-[9999] flex items-center justify-center bg-white"
+        >
+            <div class="flex flex-col items-center gap-6">
+                <div class="h-px w-48 overflow-hidden bg-black/10">
+                    <div
+                        class="h-full bg-black transition-all duration-700 ease-out"
+                        :style="`width: ${progress}%`"
+                    ></div>
+                </div>
+
+                <p class="text-xs uppercase tracking-[0.35em] text-black/40">
+                    Создаем бренд
+                </p>
+            </div>
+        </div>
+
     <section class="flex min-h-screen items-center bg-white px-6 py-16 md:min-h-0 md:py-10 sm:px-4">
         <div class="mx-auto w-full max-w-7xl">
             <div class="grid grid-cols-2 items-center gap-16 lg:grid-cols-1 lg:gap-12">
@@ -681,4 +711,89 @@
             };
         }
     </script>
+
+        <script>
+            function pagePreloader() {
+                return {
+                    visible: true,
+                    progress: 0,
+
+                    init() {
+                        document.body.style.overflow = 'hidden';
+
+                        setTimeout(() => {
+                            this.progress = 45;
+                        }, 120);
+
+                        setTimeout(() => {
+                            this.progress = 80;
+                        }, 450);
+
+                        setTimeout(() => {
+                            this.progress = 100;
+                        }, 850);
+
+                        setTimeout(() => {
+                            this.visible = false;
+                            document.body.style.overflow = '';
+                        }, 1250);
+                    },
+                };
+            }
+
+            function revealOnScroll(delay = 0) {
+                return {
+                    shown: false,
+                    delay,
+
+                    init() {
+                        const observer = new IntersectionObserver(
+                            ([entry]) => {
+                                if (entry.isIntersecting) {
+                                    setTimeout(() => {
+                                        this.shown = true;
+                                    }, this.delay);
+
+                                    observer.unobserve(this.$el);
+                                }
+                            },
+                            {
+                                threshold: 0.12,
+                                rootMargin: '0px 0px -6% 0px',
+                            }
+                        );
+
+                        observer.observe(this.$el);
+                    },
+                };
+            }
+
+            function projectCarousel(images) {
+                return {
+                    images,
+                    active: 0,
+
+                    current() {
+                        return this.images[this.active] || {};
+                    },
+
+                    next() {
+                        this.active = this.active === this.images.length - 1
+                            ? 0
+                            : this.active + 1;
+                    },
+
+                    prev() {
+                        this.active = this.active === 0
+                            ? this.images.length - 1
+                            : this.active - 1;
+                    },
+
+                    goTo(index) {
+                        this.active = index;
+                    },
+                };
+            }
+        </script>
+
 </div>
